@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="receipt">
+    <h1>Receipt</h1>
+    <p><strong>Order ID:</strong> {{ order[0] }}</p>
+    <p><strong>Customer Name:</strong> {{ order[1] }}</p>
+    <p><strong>Date:</strong> {{ order[5] }}</p>
+    <p><strong>Payment Status:</strong> {{ order[3] }}</p>
+    <p><strong>Order Status:</strong> {{ order[4] }}</p>
+    
+    <h3>Items Purchased:</h3>
+    <ul>
+        {% for item in order[2].split(', ') %}
+        <li>{{ item }}</li>
+        {% endfor %}
+    </ul>
+
+    <h3>Total: Ksh {{ order[2] }}</h3>
+
+    <button onclick="window.print()">Print Receipt</button>
+</div>
+{% endblock %}

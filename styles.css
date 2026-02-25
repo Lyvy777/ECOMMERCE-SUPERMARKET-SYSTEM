@@ -1,0 +1,517 @@
+body {
+    font-family: Arial, sans-serif;
+}
+header nav a {
+    margin: 0 10px;
+}
+.products {
+    display: flex;
+    flex-wrap: wrap;
+}
+.product {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 10px;
+    text-align: center;
+    width: 200px;
+}
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+header {
+    background-color: #007bff;
+    padding: 10px 20px;
+    color: white;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Content Styles */
+main {
+    padding: 20px;
+}
+
+/* Forms */
+.form-container {
+    background: white;
+    padding: 20px;
+    margin: auto;
+    max-width: 400px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-container form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-container form input,
+.form-container form select,
+.form-container form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.form-container form button {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.form-container form button:hover {
+    background-color: #0056b3;
+}
+
+/* Products */
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.product {
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 200px;
+}
+
+.product img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.product h2 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.product p {
+    font-size: 16px;
+    color: #555;
+}
+
+.product form button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.product form button:hover {
+    background-color: #218838;
+}
+
+/* Cart */
+.cart-container {
+    background: white;
+    padding: 20px;
+    margin: auto;
+    max-width: 800px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.cart-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.cart-container table th,
+.cart-container table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.cart-container table th {
+    background-color: #f1f1f1;
+}
+
+.btn-checkout,
+.btn-delete {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.btn-delete {
+    background-color: #dc3545;
+}
+
+.btn-checkout:hover,
+.btn-delete:hover {
+    opacity: 0.9;
+}
+
+/* General Reset */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    text-align: center;
+}
+
+/* Welcome Page Styling */
+.welcome-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.welcome-container h1 {
+    font-size: 3rem;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.welcome-container p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.welcome-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.welcome-buttons .btn {
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 2px solid #007bff;
+    color: #007bff;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.welcome-buttons .btn:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.btn-continue {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.btn-continue:hover {
+    background-color: #0056b3;
+}
+
+/* General styling for the products */
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.product {
+    background: #fff;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 220px;
+    text-align: center;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.product h2 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.product p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.product form {
+    margin-top: 10px;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-top: 40px;
+    text-align: center;
+    color: #007bff;
+}
+
+.filter-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+    gap: 10px;
+}
+
+.filter-form label {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.filter-form select, 
+.filter-form input {
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.filter-form button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.filter-form button:hover {
+    background-color: #0056b3;
+}
+
+.receipt {
+    width: 60%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.receipt h1, .receipt h2 {
+    text-align: center;
+}
+
+.receipt ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.receipt ul li {
+    margin: 5px 0;
+}
+
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 15px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Header styling */
+h1 {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+/* Table styling */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.table th, 
+.table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.table th {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.table td {
+    font-size: 14px;
+    color: #555;
+}
+
+.table .status-pending {
+    color: #d9534f; /* Red for pending */
+    font-weight: bold;
+}
+
+.table .status-approved {
+    color: #5cb85c; /* Green for approved */
+    font-weight: bold;
+}
+
+.table .status-shipped {
+    color: #5bc0de; /* Blue for shipped */
+    font-weight: bold;
+}
+
+/* Buttons */
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .table {
+        font-size: 12px;
+    }
+
+    .table th, 
+    .table td {
+        padding: 8px;
+    }
+
+    button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}
+
+/* Action Button */
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.text-danger {
+    color: #d9534f;
+    font-weight: bold;
+}
+

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block content %}
+<div class="form-container">
+    <h2>Payment</h2>
+    <form method="post">
+        <label for="payment_method">Choose Payment Method:</label>
+        <select id="payment_method" name="payment_method" required>
+            <option value="mpesa">Mpesa</option>
+            <option value="bank">Bank</option>
+        </select>
+        
+        <div id="mpesa-section" class="payment-section">
+            <label for="phone">Phone Number:</label>
+            <input type="text" id="phone" name="phone" placeholder="e.g. 0712345678">
+        </div>
+        
+        <div id="bank-section" class="payment-section">
+            <label for="bank_card">Bank Card:</label>
+            <input type="text" id="bank_card" name="bank_card" placeholder="e.g. 1234-5678-9012-3456">
+        </div>
+        
+        <button type="submit">Confirm Payment</button>
+    </form>
+</div>
+<script>
+    const paymentMethod = document.getElementById('payment_method');
+    const mpesaSection = document.getElementById('mpesa-section');
+    const bankSection = document.getElementById('bank-section');
+    
+    paymentMethod.addEventListener('change', () => {
+        if (paymentMethod.value === 'mpesa') {
+            mpesaSection.style.display = 'block';
+            bankSection.style.display = 'none';
+        } else if (paymentMethod.value === 'bank') {
+            bankSection.style.display = 'block';
+            mpesaSection.style.display = 'none';
+        } else {
+            mpesaSection.style.display = 'none';
+            bankSection.style.display = 'none';
+        }
+    });
+    paymentMethod.dispatchEvent(new Event('change'));
+</script>
+{% endblock %}

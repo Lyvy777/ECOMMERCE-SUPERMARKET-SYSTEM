@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block content %}
+<div class="form-container">
+    <h2>Billing Address& Payment</h2>
+    <form action="{{ url_for('checkout') }}" method="post">
+        <!-- Billing Address -->
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" required>
+        
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" required>
+        
+        <label for="zip">Zip Code:</label>
+        <input type="text" id="zip" name="zip" required>
+        
+        <!-- Payment Details -->
+        <label for="payment_method">Payment Method:</label>
+        <select id="payment_method" name="payment_method" required>
+            <option value="mpesa">Mpesa</option>
+            <option value="bank">Bank</option>
+        </select>
+        
+        <!-- Payment Details Based on Method -->
+        <div id="mpesa-section" class="payment-section">
+            <label for="phone">Phone Number:</label>
+            <input type="text" id="phone" name="phone" placeholder="e.g. 0712345678">
+        </div>
+        
+        <div id="bank-section" class="payment-section" style="display: none;">
+            <label for="bank_card">Bank Card:</label>
+            <input type="text" id="bank_card" name="bank_card" placeholder="e.g. 1234-5678-9012-3456">
+        </div>
+        
+        <button type="submit">Pay Now</button>
+    </form>
+</div>
+
+<script>
+    // Show payment-specific fields based on selected payment method
+    const paymentMethod = document.getElementById('payment_method');
+    const mpesaSection = document.getElementById('mpesa-section');
+    const bankSection = document.getElementById('bank-section');
+    
+    paymentMethod.addEventListener('change', () => {
+        if (paymentMethod.value === 'mpesa') {
+            mpesaSection.style.display = 'block';
+            bankSection.style.display = 'none';
+        } else if (paymentMethod.value === 'bank') {
+            bankSection.style.display = 'block';
+            mpesaSection.style.display = 'none';
+        }
+    });
+    paymentMethod.dispatchEvent(new Event('change'));
+</script>
+{% endblock %}

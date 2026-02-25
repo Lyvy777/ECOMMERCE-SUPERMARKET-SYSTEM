@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <title>Cheapmatt Supermarket</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="{{ url_for('welcome') }}">Home</a>
+            {% if session.get('username') %}
+                <a href="/cart">CART</a>
+                <a href="{{ url_for('logout') }}">Logout</a>
+                <span>Welcome, {{ session['username'] }}</span>
+            {% else %}
+                <a href="{{ url_for('signup') }}">Sign Up</a>
+                <a href="{{ url_for('login') }}">Login</a>
+            {% endif %}
+        </nav>
+    </header>
+    
+    <!-- <header>
+        <nav>
+            <a href="/">HOME</a>
+            {% if session.get('username') %}
+                <a href="/cart">CART</a>
+                <span>Welcome, {{ session['username'] }}</span>
+            {% else %}
+                <a href="/login">Login</a>
+                <a href="/signup">Sign Up</a>
+            {% endif %}
+        </nav>
+    </header> -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>

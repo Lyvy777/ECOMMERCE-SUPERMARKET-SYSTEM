@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <h1>Your Orders</h1>
+
+    {% if orders %}
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Order ID</th>
+                <th>Items</th>
+                <th>Total Price</th>
+                <th>Payment Status</th>
+                <th>Order Status</th>
+                <th>Order Date</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for order in orders %}
+            <tr>
+                <td>{{ order[0] }}</td>
+                <td>{{ order[1] }}</td>
+                <td>Ksh {{ order[2] }}</td>
+                <td class="{{ 'status-pending' if order[3] == 'Pending Payment' else 'status-approved' }}">
+                    {{ order[3] }}
+                </td>
+                <td class="{{ 'status-shipped' if order[4] == 'Shipped' else '' }}">{{ order[4] }}</td>
+                <td>{{ order[5] }}</td>
+
+                <td>
+                    {% if order[3] == "Payment Approved" %}
+                    <a href="{{ url_for('download_receipt', order_id=order[0]) }}" class="btn btn-primary">Download Receipt</a>
+                    {% else %}
+                    <span class="text-danger">Not Available</span>
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <p>You have no orders yet.</p>
+    {% endif %}
+</div>
+{% endblock %}

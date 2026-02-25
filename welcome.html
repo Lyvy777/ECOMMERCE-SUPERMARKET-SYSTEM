@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block content %}
+<div class="welcome-container">
+    <h1>Welcome to Cheapmatt Supermarket</h1>
+    <p>Your one-stop online shop for all your needs!</p>
+    <div class="buttons">
+        <a href="{{ url_for('signup') }}" class="btn">Sign Up</a>
+        <a href="{{ url_for('login') }}" class="btn">Login</a>
+    </div>
+</div>
+{% endblock %}
