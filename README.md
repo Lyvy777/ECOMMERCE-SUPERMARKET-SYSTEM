@@ -22,8 +22,7 @@ The system was developed as a software development project.
 1. Install Python on your computer.
 2. Download or clone the project files.
 3. Open the project folder.
-4. Run the Python file (example):
-   python app.py
+4. Run the Python file app.py
 5. Open the browser using the local server link (if applicable).
 
 ## Project Purpose
